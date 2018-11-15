@@ -49,6 +49,8 @@ function checkWinner() {
   for (const combo of winningCombos) {
     if (((stateArr[combo[0]] === stateArr[combo[1]]) && stateArr[combo[0]] !== "") && stateArr[combo[1]] == stateArr[combo[2]]) {
       setMessage('Player ' + stateArr[combo[0]] + ' Won!');
+      saveGame();
+      clearBoard();
       return true;
     }
   }
