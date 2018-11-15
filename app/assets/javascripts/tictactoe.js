@@ -65,6 +65,14 @@ function doTurn(square) {
   }
 }
 
+function clearBoard() {
+  stateArr = ["", "", "", "", "", "", "", "", ""];
+  turn = setTurn();
+  $('td').each(function(index, td) {
+    $(td).text("");
+  });
+}
+
 function attachListeners() {
   $('td').on('click', function() {
     doTurn($(this));
