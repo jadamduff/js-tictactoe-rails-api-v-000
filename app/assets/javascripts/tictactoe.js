@@ -34,11 +34,11 @@ function findPosition(x_pos, y_pos) {
 }
 
 function doTurn(square) {
-  console.log(square.data('x'));
+  console.log(square);
 }
 
 function attachListeners() {
-  $('td').on('click', doTurn(this));
+  $('td').on('click', doTurn($(this)));
 }
 
 $(document).ready(function() {
