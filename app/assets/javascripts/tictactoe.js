@@ -56,6 +56,7 @@ function checkWinner() {
       return true;
     }
   }
+  console.log(gameId);
   setMessage('');
   return false;
 }
