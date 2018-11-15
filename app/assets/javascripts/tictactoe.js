@@ -80,7 +80,8 @@ function saveGame() {
   let posting = $.post('/games', {"state": stateArr });
 
   posting.done(function(response) {
-    console.log(response);
+    gameId = response["data"]["id"];
+    console.log(gameId);
   });
 }
 
