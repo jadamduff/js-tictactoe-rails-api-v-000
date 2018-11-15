@@ -67,8 +67,10 @@ function setMessage(message) {
 }
 
 function doTurn(square) {
-  if (!checkWinner()) {
+  if (!gameWon) {
     updateState(square);
+  } else {
+    clearBoard();
   }
 }
 
