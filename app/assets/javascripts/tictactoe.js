@@ -77,12 +77,24 @@ function clearBoard() {
 }
 
 function saveGame() {
-  let posting = $.post('/games', {"state": stateArr });
-
-  posting.done(function(response) {
-    gameId = response["data"]["id"];
-    console.log(gameId);
-  });
+  if (gameId === 'none') {
+    let posting = $.post('/games', {"state": stateArr });
+    posting.done(function(response) {
+      gameId = response["data"]["id"];
+    });
+  } else {
+    $.ajax({
+      type: 'PATCH',
+      url: 'games/' + gameId,
+      data: { "state": stateArr },
+      processData: false,
+      contentType: 'application/json-patch+json',
+      success: function(response) {
+        console.log(response);
+      }
+    });
+  }
+  
 }
 
 function getGames() {
