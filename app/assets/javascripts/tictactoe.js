@@ -33,18 +33,6 @@ function findPos(x_pos, y_pos) {
   return arrPos += x;
 }
 
-
-
-function doTurn(square) {
-  updateState(square);
-}
-
-function attachListeners() {
-  $('td').on('click', function() {
-    doTurn($(this));
-  });
-}
-
 $(document).ready(function() {
   attachListeners();
 
@@ -56,4 +44,15 @@ $(document).ready(function() {
       td.text(stateArr[index]);
     });
   }
+
+  function doTurn(square) {
+    updateState(square);
+  }
+
+  function attachListeners() {
+    $('td').on('click', function() {
+      doTurn($(this));
+    });
+  }
+
 });
