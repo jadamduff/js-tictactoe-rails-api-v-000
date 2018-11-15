@@ -95,6 +95,10 @@ function attachListeners() {
   $('#save').on('click', function() {
     saveGame();
   });
+
+  $('#previous').on('click', function() {
+    getGames();
+  });
 }
 
 $(document).ready(function() {
