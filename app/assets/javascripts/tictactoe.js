@@ -44,7 +44,7 @@ $(document).ready(function() {
       $(td).text(stateArr[index]);
     });
 
-    turn = setTurn();
+    turn = setTurn(stateArr);
   }
 
   function doTurn(square) {
