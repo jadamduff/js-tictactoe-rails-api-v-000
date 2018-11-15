@@ -85,7 +85,7 @@ function saveGame() {
   } else {
     $.ajax({
       type: 'PATCH',
-      url: 'games/' + gameId,
+      url: '/games/' + gameId,
       data: { "state": stateArr },
       contentType : 'application/json',
       dataType: 'json',
