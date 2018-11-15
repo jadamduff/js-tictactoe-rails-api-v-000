@@ -87,6 +87,9 @@ function saveGame() {
       type: 'PATCH',
       url: 'games/' + gameId,
       data: { "state": stateArr },
+      contentType : 'application/json',
+      processData: false,
+      dataType: 'json'
       success: function(response) {
         console.log(response);
       }
