@@ -94,7 +94,7 @@ function saveGame() {
       }
     });
   }
-  
+
 }
 
 function getGames() {
