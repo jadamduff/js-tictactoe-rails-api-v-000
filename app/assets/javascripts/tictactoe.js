@@ -43,7 +43,10 @@ function updateState(square) {
   });
 
   turn = setTurn();
-  checkWinner();
+
+  if (checkWinner()) {
+    clearBoard();
+  }
 }
 
 function checkWinner() {
