@@ -41,7 +41,7 @@ $(document).ready(function() {
     stateArr[selected_square] = player();
 
     $('td').each(function(index, td) {
-      $(this).text(stateArr[index]);
+      $(td).text(stateArr[index]);
     });
   }
 
