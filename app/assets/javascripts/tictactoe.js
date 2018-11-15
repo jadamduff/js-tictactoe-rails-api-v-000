@@ -44,7 +44,6 @@ function updateState(square) {
   turn = setTurn();
 }
 
-function checkWinner
 
 function doTurn(square) {
   updateState(square);
