@@ -70,7 +70,7 @@ function setMessage(message) {
 }
 
 function doTurn(square) {
-  if (!checkWinner()) {
+  if (!gameWon) {
     updateState(square);
   }
 }
@@ -127,7 +127,7 @@ function getGame(el) {
       $(td).text(stateArr[index]);
     });
     setMessage('');
-    
+
   });
 }
 
