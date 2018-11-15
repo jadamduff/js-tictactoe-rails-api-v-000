@@ -13,8 +13,6 @@ function setTurn(arr) {
   return counter;
 }
 
-
-
 function player() {
   if (turn % 2 === 0) {
     return "X";
@@ -33,6 +31,12 @@ function findPosition(x_pos, y_pos) {
     arrPos = 6;
   }
   return arrPos += x;
+}
+
+function attachListeners() {
+  $('td').on('click', function() {
+    console.log($(this).data('x'));
+  });
 }
 
 $(document).ready(function() {
