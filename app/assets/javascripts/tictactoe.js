@@ -90,8 +90,8 @@ function getGames() {
       html += '<li data-id="' + savedGame.id + '">' + savedGame.id + '</li>';
     }
     html += '</ul>'
+    $('#games').html(html);
   });
-  $('#games').html(html);
 }
 
 function attachListeners() {
