@@ -44,5 +44,5 @@ function attachListeners() {
 }
 
 $(document).ready(function() {
-
+  attachListeners();
 });
