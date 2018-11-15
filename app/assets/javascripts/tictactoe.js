@@ -88,7 +88,7 @@ function saveGame() {
       url: 'games/' + gameId,
       data: { "state": stateArr },
       contentType : 'application/json',
-      dataType: 'json'
+      dataType: 'json',
       success: function(response) {
         console.log(response);
       }
