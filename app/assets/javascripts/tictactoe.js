@@ -21,7 +21,7 @@ function player() {
   }
 }
 
-function findPosition(x_pos, y_pos) {
+function findPos(x_pos, y_pos) {
   let x = parseInt(x_pos);
   let y = parseInt(y_pos);
   let arrPos = 0;
@@ -31,6 +31,15 @@ function findPosition(x_pos, y_pos) {
     arrPos = 6;
   }
   return arrPos += x;
+}
+
+function updateState(square) {
+  let selected_square = findPos(square.data('x'), square.data('y'));
+  stateArr[selected_square] = player();
+
+  $('td').forEach(function(td, index) {
+    td.text(stateArr[index]);
+  });
 }
 
 function doTurn(square) {
