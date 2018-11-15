@@ -74,6 +74,7 @@ function clearBoard() {
   $('td').each(function(index, td) {
     $(td).text("");
   });
+  gameid = 'none';
 }
 
 function saveGame() {
