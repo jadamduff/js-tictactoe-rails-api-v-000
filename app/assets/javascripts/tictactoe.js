@@ -34,11 +34,9 @@ function findPosition(x_pos, y_pos) {
 }
 
 function attachListeners() {
-  $('td').on('click', function() {
-    console.log($(this).data('x'));
-  });
+  $('td').on('click', doTurn($(this)));
 }
 
 $(document).ready(function() {
-  attachListeners();
+  
 });
