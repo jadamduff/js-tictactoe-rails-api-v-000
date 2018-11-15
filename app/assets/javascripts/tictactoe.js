@@ -123,6 +123,7 @@ function getGame(el) {
       $(td).text(stateArr[index]);
     });
     setMessage('');
+    gameWon = checkWinner();
   });
 }
 
