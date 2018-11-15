@@ -86,7 +86,7 @@ function saveGame() {
     $.ajax({
       type: 'PATCH',
       url: '/games/' + gameId,
-      data: { "state": stateArr },
+      data: JSON.stringify({ "state": stateArr }),
       contentType : 'application/json',
       dataType: 'json',
       success: function(response) {
