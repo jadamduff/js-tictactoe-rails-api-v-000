@@ -110,6 +110,10 @@ function attachListeners() {
   $('#previous').on('click', function() {
     getGames();
   });
+
+  $('li').on('click', function() {
+    getGame();
+  })
 }
 
 $(document).ready(function() {
