@@ -91,6 +91,9 @@ function getGames() {
     }
     html += '</ul>'
     $('#games').html(html);
+    $('li').on('click', function() {
+      getGame($(this));
+    });
   });
 }
 
@@ -116,10 +119,6 @@ function attachListeners() {
   $('#previous').on('click', function() {
     getGames();
   });
-
-  $('li').on('click', function() {
-    getGame($(this));
-  })
 }
 
 $(document).ready(function() {
