@@ -84,11 +84,14 @@ function saveGame() {
 }
 
 function getGames() {
+  let html = '<ul>';
   $.get('/games', function(response) {
     for (const savedGame of response['data']) {
-      console.log(savedGame.id)
+      html += '<li data-id="' + savedGame.id + '">' + savedGame.id + '</li>';
     }
   });
+  html += '</ul>'
+  $('#games').html(html);
 }
 
 function attachListeners() {
