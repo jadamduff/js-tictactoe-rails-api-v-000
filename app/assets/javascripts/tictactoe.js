@@ -71,6 +71,7 @@ function clearBoard() {
   $('td').each(function(index, td) {
     $(td).text("");
   });
+  setMessage("");
 }
 
 function attachListeners() {
