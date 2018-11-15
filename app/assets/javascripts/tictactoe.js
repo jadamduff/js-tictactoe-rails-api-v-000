@@ -60,7 +60,7 @@ function setMessage(message) {
 }
 
 function doTurn(square) {
-  if (!checkWinner) {
+  if (!checkWinner()) {
     updateState(square);
   }
 }
