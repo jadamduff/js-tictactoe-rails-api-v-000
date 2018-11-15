@@ -116,6 +116,7 @@ function getGames() {
 function getGame(el) {
   $.get('/games/' + el.data('id'), function(response) {
     stateArr = response['data']['attributes']['state'];
+    turn = setTurn();
     $('td').each(function(index, td) {
       $(td).text(stateArr[index]);
     });
