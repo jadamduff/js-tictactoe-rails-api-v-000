@@ -83,6 +83,12 @@ function saveGame() {
   });
 }
 
+function getGames() {
+  $.get('/games', function(data) {
+    console.log(data);
+  });
+}
+
 function attachListeners() {
   $('td').on('click', function() {
     doTurn($(this));
