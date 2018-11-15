@@ -38,9 +38,7 @@ function doTurn(square) {
 }
 
 function attachListeners() {
-  $('td').on('click', function() {
-    doTurn($(this));
-  });
+  $('td').on('click', doTurn($(this));
 }
 
 $(document).ready(function() {
