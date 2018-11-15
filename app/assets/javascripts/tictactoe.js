@@ -85,7 +85,7 @@ function saveGame() {
 
 function getGames() {
   $.get('/games', function(data) {
-    for (const savedGame of data) {
+    for (const savedGame of data.data) {
       console.log(savedGame.id)
     }
   });
