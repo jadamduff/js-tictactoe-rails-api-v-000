@@ -74,6 +74,7 @@ function doTurn(square) {
 function clearBoard() {
   stateArr = ["", "", "", "", "", "", "", "", ""];
   turn = setTurn();
+  gameWon = checkWinner();
   $('td').each(function(index, td) {
     $(td).text("");
   });
