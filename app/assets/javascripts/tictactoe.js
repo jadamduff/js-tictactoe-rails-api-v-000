@@ -52,6 +52,7 @@ function checkWinner() {
       setMessage('Player ' + stateArr[combo[0]] + ' Won!');
       saveGame();
       clearBoard();
+      console.log(gameId);
       return true;
     }
   }
