@@ -39,9 +39,9 @@ $(document).ready(function() {
   function updateState(square) {
     let selected_square = findPos(square.data('x'), square.data('y'));
     stateArr[selected_square] = player();
-    debugger
+
     $('td').each(function(td, index) {
-      $(td).text(stateArr[index]);
+      $(this).text(stateArr[index]);
     });
   }
 
