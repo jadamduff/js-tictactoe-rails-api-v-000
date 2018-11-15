@@ -40,7 +40,7 @@ $(document).ready(function() {
     let selected_square = findPos(square.data('x'), square.data('y'));
     stateArr[selected_square] = player();
 
-    $('td').forEach(function(td, index) {
+    $('td').each(function(td, index) {
       td.text(stateArr[index]);
     });
   }
