@@ -33,28 +33,28 @@ function findPos(x_pos, y_pos) {
   return arrPos += x;
 }
 
+function updateState(square) {
+  let selected_square = findPos(square.data('x'), square.data('y'));
+  stateArr[selected_square] = player();
+
+  $('td').each(function(index, td) {
+    $(td).text(stateArr[index]);
+  });
+
+  turn = setTurn(stateArr);
+}
+
+function doTurn(square) {
+  updateState(square);
+}
+
+function attachListeners() {
+  $('td').on('click', function() {
+    doTurn($(this));
+  });
+}
+
 $(document).ready(function() {
   attachListeners();
-
-  function updateState(square) {
-    let selected_square = findPos(square.data('x'), square.data('y'));
-    stateArr[selected_square] = player();
-
-    $('td').each(function(index, td) {
-      $(td).text(stateArr[index]);
-    });
-
-    turn = setTurn(stateArr);
-  }
-
-  function doTurn(square) {
-    updateState(square);
-  }
-
-  function attachListeners() {
-    $('td').on('click', function() {
-      doTurn($(this));
-    });
-  }
 
 });
