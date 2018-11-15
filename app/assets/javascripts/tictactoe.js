@@ -55,6 +55,10 @@ function checkWinner() {
   }
 }
 
+function setMessage(message) {
+  $('#message').text(message);
+}
+
 function doTurn(square) {
   updateState(square);
 }
