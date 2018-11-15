@@ -69,9 +69,12 @@ function attachListeners() {
   $('td').on('click', function() {
     doTurn($(this));
   });
+
+  $('#clear').on('click', function() {
+    clearBoard();
+  });
 }
 
 $(document).ready(function() {
   attachListeners();
-
 });
