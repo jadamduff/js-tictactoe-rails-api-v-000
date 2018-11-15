@@ -83,7 +83,7 @@ function saveGame() {
       gameId = response["data"]["id"];
     });
   } else {
-    let posting = $.post('/games/' + gameId, {"state": stateArr });
+    let posting = $.patch('/games/' + gameId, {"state": stateArr });
     posting.done(function(response) {
       console.log(response);
     });
