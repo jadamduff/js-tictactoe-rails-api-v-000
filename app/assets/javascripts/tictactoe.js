@@ -99,7 +99,7 @@ function getGames() {
 
 function getGame(el) {
   $.get('/games/' + el.data('id'), function(response) {
-    console.log(response);
+    console.log(response['data']['attributes']['state']);
   });
 }
 
