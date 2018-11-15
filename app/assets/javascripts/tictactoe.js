@@ -84,8 +84,7 @@ function attachListeners() {
   });
 
   $('#save').on('click', function() {
-    let gameState = JSON.stringify(stateArr);
-    let posting = $.post('/games', gameState);
+    let posting = $.post('/games', stateArr);
 
     posting.done(function(data) {
       console.log(data);
