@@ -33,14 +33,7 @@ function findPos(x_pos, y_pos) {
   return arrPos += x;
 }
 
-function updateState(square) {
-  let selected_square = findPos(square.data('x'), square.data('y'));
-  stateArr[selected_square] = player();
 
-  $('td').forEach(function(td, index) {
-    td.text(stateArr[index]);
-  });
-}
 
 function doTurn(square) {
   updateState(square);
@@ -54,4 +47,13 @@ function attachListeners() {
 
 $(document).ready(function() {
   attachListeners();
+
+  function updateState(square) {
+    let selected_square = findPos(square.data('x'), square.data('y'));
+    stateArr[selected_square] = player();
+
+    $('td').forEach(function(td, index) {
+      td.text(stateArr[index]);
+    });
+  }
 });
