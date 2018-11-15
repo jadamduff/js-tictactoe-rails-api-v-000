@@ -60,7 +60,9 @@ function setMessage(message) {
 }
 
 function doTurn(square) {
-  updateState(square);
+  if (!checkWinner) {
+    updateState(square);
+  }
 }
 
 function attachListeners() {
