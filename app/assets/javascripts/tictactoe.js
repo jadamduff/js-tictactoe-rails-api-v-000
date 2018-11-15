@@ -50,10 +50,9 @@ function checkWinner() {
     if (((stateArr[combo[0]] === stateArr[combo[1]]) && stateArr[combo[0]] !== "") && stateArr[combo[1]] == stateArr[combo[3]]) {
       setMessage('Player ' + stateArr[combo[0]] + ' Won!');
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 }
 
 function setMessage(message) {
