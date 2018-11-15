@@ -43,7 +43,7 @@ function updateState(square) {
 }
 
 function doTurn(square) {
-  console.log(square.data('x'));
+  updateState();
 }
 
 function attachListeners() {
