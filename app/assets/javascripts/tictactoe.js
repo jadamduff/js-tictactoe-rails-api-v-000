@@ -55,6 +55,7 @@ function checkWinner() {
       return true;
     }
   }
+  setMessage('');
   return false;
 }
 
@@ -114,7 +115,7 @@ function getGames() {
 
 function getGame(el) {
   $.get('/games/' + el.data('id'), function(response) {
-    console.log(response['data']['attributes']['state']);
+    stateArr = response['data']['attributes']['state'];
   });
 }
 
