@@ -84,13 +84,13 @@ function saveGame() {
 }
 
 function getGames() {
-  let html = '<ul>';
   $.get('/games', function(response) {
+    let html = '<ul>';
     for (const savedGame of response['data']) {
       html += '<li data-id="' + savedGame.id + '">' + savedGame.id + '</li>';
     }
+    html += '</ul>'
   });
-  html += '</ul>'
   $('#games').html(html);
 }
 
