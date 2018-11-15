@@ -43,6 +43,8 @@ $(document).ready(function() {
     $('td').each(function(index, td) {
       $(td).text(stateArr[index]);
     });
+
+    turn = setTurn();
   }
 
   function doTurn(square) {
