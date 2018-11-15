@@ -74,6 +74,14 @@ function clearBoard() {
   setMessage("");
 }
 
+function saveGame() {
+  let posting = $.post('/games', {"state": stateArr });
+
+  posting.done(function(data) {
+    console.log(data);
+  });
+}
+
 function attachListeners() {
   $('td').on('click', function() {
     doTurn($(this));
@@ -84,11 +92,7 @@ function attachListeners() {
   });
 
   $('#save').on('click', function() {
-    let posting = $.post('/games', {"state": stateArr });
-
-    posting.done(function(data) {
-      console.log(data);
-    })
+    saveGame();
   });
 }
 
