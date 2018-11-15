@@ -89,7 +89,7 @@ function saveGame() {
       data: { "state": stateArr },
       contentType : 'application/json',
       processData: false,
-      dataType: 'json'
+      dataType: 'json',
       success: function(response) {
         console.log(response);
       }
