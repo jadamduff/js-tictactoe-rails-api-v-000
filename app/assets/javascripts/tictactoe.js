@@ -82,6 +82,15 @@ function attachListeners() {
   $('#clear').on('click', function() {
     clearBoard();
   });
+
+  $('#save').on('click', function() {
+    let gameState = JSON.stringify(stateArr);
+    let posting = $.post('/games', gameState);
+
+    posting.done(function(data) {
+      console.log(data);
+    })
+  });
 }
 
 $(document).ready(function() {
