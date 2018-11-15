@@ -84,7 +84,7 @@ function attachListeners() {
   });
 
   $('#save').on('click', function() {
-    let posting = $.post('/games', stateArr);
+    let posting = $.post('/games', {"state": stateArr });
 
     posting.done(function(data) {
       console.log(data);
