@@ -14,7 +14,7 @@ function setTurn(arr) {
 
 let turn = setTurn(stateArr);
 
-window.player = function() {
+function player() {
   if (turn % 2 === 0) {
     return "X";
   } else {
@@ -22,7 +22,7 @@ window.player = function() {
   }
 }
 
-let findPosition = function(x_pos, y_pos) {
+function findPosition(x_pos, y_pos) {
   let x = parseInt(x_pos);
   let y = parseInt(y_pos);
   let arrPos = 0;
