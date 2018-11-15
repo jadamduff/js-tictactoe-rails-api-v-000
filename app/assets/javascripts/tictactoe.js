@@ -34,7 +34,7 @@ function findPosition(x_pos, y_pos) {
 }
 
 function doTurn(square) {
-  console.log(square);
+  console.log(square.data('x'));
 }
 
 function attachListeners() {
