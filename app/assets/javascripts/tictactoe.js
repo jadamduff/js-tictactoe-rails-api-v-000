@@ -83,16 +83,9 @@ function saveGame() {
       gameId = response["data"]["id"];
     });
   } else {
-    $.ajax({
-      type: 'PATCH',
-      url: '/games/' + gameId,
-      data: { "state": stateArr },
-      contentType : 'application/json',
-      processData: false,
-      dataType: 'json',
-      success: function(response) {
-        console.log(response);
-      }
+    let posting = $.post('/games/' + gameId, {"state": stateArr });
+    posting.done(function(response) {
+      console.log(response);
     });
   }
 
