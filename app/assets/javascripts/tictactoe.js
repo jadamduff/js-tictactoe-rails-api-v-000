@@ -2,7 +2,7 @@ let stateArr = ["", "", "", "", "", "", "", "", ""];
 const winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
 let turn = setTurn();
 let gameId = 'none';
-let gameWon = checkWinner();
+let gameWon = false;
 
 
 
@@ -54,10 +54,12 @@ function checkWinner() {
       setMessage('Player ' + stateArr[combo[0]] + ' Won!');
       saveGame();
       console.log(gameId);
+      gameWon = true;
       return true;
     }
   }
   console.log(gameId);
+  gameWon = false;
   setMessage('');
   return false;
 }
@@ -77,7 +79,7 @@ function doTurn(square) {
 function clearBoard() {
   stateArr = ["", "", "", "", "", "", "", "", ""];
   turn = setTurn();
-  gameWon = checkWinner();
+  gameWon = false;
   $('td').each(function(index, td) {
     $(td).text("");
   });
