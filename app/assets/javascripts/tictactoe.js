@@ -40,8 +40,5 @@ function attachListeners() {
 }
 
 $(document).ready(function() {
-
-  $('body').on('click', function() {
-    console.log('worked');
-  })
+  attachListeners();
 });
